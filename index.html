@@ -1,0 +1,238 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Guía para bastionar la BIOS/UEFI</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="rladgar"
+                  title="Guía para bastionar la BIOS/UEFI"
+                  environment="web"
+                  feedback-link="https://github.com/rladgar/rladgar.github.io/issues/">
+    
+      <google-codelab-step label="Introducción" duration="5">
+        <p>En este proyecto realizaré una guía para bastionar la BIOS/UEFI de mi portátil personal <strong>ASUS ROG ZEPHYRUS G15 GA502IV</strong>, para ello aplicaré medidas de seguridad como establecer contraseñas de acceso a la BIOS, cambiar el orden de arranque de los dispositivos, bloquear los puertos USB, etc...</p>
+<p><strong>Información de la BIOS utilizada:</strong></p>
+<p class="image-container"><img alt="Alt text" src="img\\6b68fe67f9f5309b.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Acceder a la BIOS/UEFI" duration="5">
+        <p>En el caso de mi portátil personal (Asus Rog Zhephirus G15 GA502IV), para acceder a la BIOS tenemos que pulsar la <strong>tecla &#34;F2&#34;</strong> repetidamente nada más encender o reiniciar el equipo.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Cambiar la contraseña de administración de la BIOS/UEFI" duration="5">
+        <p>En este apartado cambiaremos la contraseña de administración de la BIOS ya que es una capa de seguridad fundamental que protege la configuración de la misma de accesos no autorizados. También protege el acceso al sistema operativo ya que si no introducimos la clave no podremos acceder a este.</p>
+<p><strong>Para cambiar dicha contraseña seguiremos los siguientes pasos:</strong></p>
+<ol type="1">
+<li>Activar el modo avanzado pulsando la tecla &#34;F7&#34;:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\495a4f017469e17c.png"></p>
+<ol type="1" start="2">
+<li>Nos dirigimos al apartado de seguridad (Segurity) y pulsamos en la opción &#34;Administrator Password -Not installed&#34; como muestro en la captura:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\ad4ecd1e958a54ff.png"></p>
+<ol type="1" start="3">
+<li>Establecemos una contraseña segura, preferiblemente que sea distinta de la que utilizamos en nuestro sistema, y pulsamos en &#34;Ok&#34;:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\9660cd70aab61879.png"></p>
+<ol type="1" start="4">
+<li>Observamos como la contraseña se ha instalado ya que antes aparecía como no instalada:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\446101bcc7f7766b.png"></p>
+<ol type="1" start="5">
+<li>Por último, salimos guardando la configuración de la BIOS pulsando la tecla &#34;F10&#34; y como vemos ya nos pide la contraseña tanto para acceder a la BIOS como para acceder al sistema:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\356fba088f83c706.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Cambiar contraseña de usuario de la BIOS" duration="5">
+        <p>En este apartado cambiaremos la contraseña de usuarios de la BIOS. Esta permite a los usuarios acceder a la BIOS, pero no pueden realizar ninguna modificación dentro de la misma.</p>
+<p>También nos sirve para que los usuarios puedan acceder al sistema ya que si previamente hemos instalado una contraseña de administrador solo este podría acceder si no establecemos esta contraseña de usuario.</p>
+<p><strong>Para cambiar dicha contraseña seguiremos los siguientes pasos:</strong></p>
+<ol type="1">
+<li>Activar el modo avanzado pulsando la tecla &#34;F7&#34;:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\495a4f017469e17c.png"></p>
+<ol type="1" start="2">
+<li>Nos dirigimos al apartado de seguridad (Segurity) y pulsamos en la opción &#34;User Password -Not installed&#34; como muestro en la captura:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\837770a390b357f3.png"></p>
+<ol type="1" start="3">
+<li>Establecemos una contraseña para que la compartan todos los usuarios que accedan al sistema:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\9660cd70aab61879.png"></p>
+<ol type="1" start="4">
+<li>Observamos que la contraseña se ha instalado ya que antes aparecía como no instalada:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\7038debba6e05965.png"></p>
+<ol type="1" start="5">
+<li>Por último, salimos guardando la configuración de la BIOS pulsando la tecla &#34;F10&#34; y como vemos ya nos pide la contraseña tanto para acceder a la BIOS (Aunque no se pueda modificar nada) como para acceder al sistema operativo:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\356fba088f83c706.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Cambiar la contraseña de arranque del dispositivo" duration="5">
+        <p>En el caso de esta BIOS la contraseña de arranque va asociada a las contraseñas de administrador y de usuario por lo que no aparece en la configuración, como pasa en BIOS un poco más antiguas.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Cambiar permiso para el arranque desde dispositivos USB" duration="5">
+        <p>En este apartado cambiaremos los permisos para el arranque desde dispositivos USB. Esto nos permitirá controlar la seguridad de los dispositivos que se pueden conectar a nuestro equipo, de esta forma bloquearemos el arranque desde dispositivos USB externos, como un pendrive o un disco externo. Con esto podemos prevenir que malware o sistemas no autorizados se ejecuten en nuestro equipo, lo que refuerza la seguridad del arranque.</p>
+<p>En el caso de esta BIOS, tras investigar y probar varias versiones de la misma, no se puede activar esta opción, solo permite bloquear puertos USB para dispositivos que usan Bluetooth cosa que no entiendo. De todas formas, explicaré como habilitar esta opción ya que la de bloquear los puertos externos debería aparecer en el mismo apartado.</p>
+<p>Para ello seguiremos los siguientes pasos:</p>
+<ol type="1">
+<li>Activamos el modo avanzado pulsando la tecla &#34;F7&#34;:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\495a4f017469e17c.png"></p>
+<ol type="1" start="2">
+<li>Nos dirigimos al apartado de seguridad (Security) y al apartado de de seguridad de interfaces (I/O Interface Security):</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\3a027e1b190104b9.png"></p>
+<ol type="1" start="3">
+<li>Nos dirigimos a la opción de seguridad de interfaz USB (USB Interface Security):</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\88abdebd79a44c27.png"></p>
+<ol type="1" start="4">
+<li>Aquí podemos ver las interfaces que podemos cambiar. En el caso de mi BIOS solo aparece la opción &#34;USB Bluetooth&#34; como explique antes. La habilitamos poniéndola en &#34;Lock&#34;, de esta forma los dispositivos USB que utilicen esta tecnología no se podrán usar en el equipo:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\7658bfe569c45f67.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Cambiar el orden de arranque de los dispositivos" duration="5">
+        <p>El orden de arranque funciona como una lista de prioridades. Por ejemplo, si la memoria USB está por encima del disco duro en su orden de arranque, el equipo probará iniciar desde la memoria USB y, si no está conectada, intentará arrancar desde el disco duro y así sucesivamente con todos los dispositivos que tengamos en el equipo.</p>
+<p>En este apartado nos centraremos en cambiar ese orden de prioridad de arranque de los dispositivos ya que esto nos ayudará a que el sistema siempre inicie desde el disco duro principal y no desde otros dispositivos como memorias USB, tarjetas de red, etc...</p>
+<p><strong>Para conseguirlo seguiremos los siguientes pasos:</strong></p>
+<ol type="1">
+<li>Activamos el modo avanzado dentro de la BIOS pulsando la tecla &#34;F7&#34;.</li>
+<li>Nos dirigimos al apartado de arranque (Boot) y en las opciones de prioridad de arranque (Boot Option Priorities), pulsando en cada una de las opciones (Ej: Boot Option #1) nos aparecerá una lista con los dispositivos que tenemos activos en nuestro equipo. En mi caso he establecido como primera opción el disco duro y como segunda opción mi pendrive como podemos ver en la captura:<img alt="Alt text" src="img\\b93dfe0ef3f55f96.png"></li>
+<li>Antes de salir de la BIOS es importante guardar la configuración que hemos realizado pulsando la tecla &#34;F10&#34;.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Activar el arranque seguro" duration="5">
+        <p>El Secure Boot o arranque seguro, es un modo para UEFI que impide la ejecución de cualquier software no firmado o certificado en el arranque del sistema. Con ello se intenta evitar la carga de malware o aplicaciones que no sean de fiar cuando iniciamos el equipo.</p>
+<p>Este sistema lo implemento Microsoft desde Windows 8 y a la hora de utilizar otros sistemas operativos como las distribuciones GNU/Linux daba muchos problemas ya que bloqueaba cualquier cosa que no fuera Windows, lo que hacía casi imposible la ejecución de Linux..</p>
+<p>Este problema se ha ido solucionando con el tiempo y ahora se puede utilizar en las últimas versiones de Ubuntu de 64 bits, así como en otras distribuciones de 64 bits más recientes.</p>
+<p><strong>Para implementar esta opción seguiremos los siguientes pasos:</strong></p>
+<ol type="1">
+<li>Accedemos al modo avanzado de configuración pulsando la tecla &#34;F7&#34;:</li>
+<li>Nos dirigimos al apartado de seguridad (Security) y abajo del todo nos aparece esta opción. Accedemos a ella pulsando &#34;Enter&#34;:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\2bbfcfbcf2ce6a72.png"></p>
+<ol type="1" start="3">
+<li>Para activarla nos digimos a la opción &#34;Secure Boot Control&#34;, pulsamos en la tecla &#34;Enter&#34; y elegimos la opción &#34;Enable&#34;:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\74e5063a3d50cd3a.png"></p>
+<ol type="1" start="4">
+<li>Una vez activamos salimos guardando con la tecla &#34;F10&#34; y ya estaría activado el arranque seguro.</li>
+</ol>
+<p>También nos podemos dar cuenta que cuando activamos esta opción se nos habilitita el apartado de gestión de llaves (Key Management). Esta característica nos permite gestionar las claves de firma digital que se utilizan para verificar la autenticidad de los componentes y programas del sistema durante el proceso de arranque seguro.</p>
+<p>Podemos observar varias opciones que nos permiten importar, exportar o eliminar claves, así como configurar políticas de seguridad para determinar qué claves son de confianza.</p>
+<p class="image-container"><img alt="Alt text" src="img\\f93f8d2289bdd78d.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Bloquear interfaces de red" duration="5">
+        <p>Bloquear algunas de las interfaces de red que no estemos utilizando puede ayudarnos a mejorar la seguridad del sistema al prevenir el acceso no autorizado por una interfaz concreta. Por ejemplo, si en nuestra empresa solo utilizamos red cableada podríamos desactivar la interfaz wifi ya que esta podría ser otra vía de entrada para ataques, además también mejora el ancho de banda de la red y puede ayudar a evitar conflictos con direcciones IP.</p>
+<p>Para bloquear estas interfaces en la BIOS nos dirigimos al apartado de seguridad y luego al apartado de seguridad de interfaces (I/O Interface Security):</p>
+<p class="image-container"><img alt="Alt text" src="img\\2240e2dc71213adc.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Actualizar el firmware de la BIOS" duration="5">
+        <p>Actualizar la BIOS nos ayudará a protegerla ya que los fabricantes a menudo lanzan actualizaciones para solucionar vulnerabilidades y mejorar la seguridad.</p>
+<p>En el caso de este modelo en concreto &#34;GA502IV&#34;, su última versión es la 300.</p>
+<p>Para actualizarla tenemos 2 formas:</p>
+<ul>
+<li>A través de Windows.</li>
+<li>A través de una memoria USB.</li>
+</ul>
+<p>En este caso en concreto, como yo utilizo Windows en mi equipo he decidido instalarlo a través de este ya que es una forma más rápida y segura que desde un pendrive donde si se nos desconecta el equipo o el pendrive mediante el proceso puede dejarnos sin BIOS directamente.</p>
+<p>Para ello he seguido los sigientes pasos:</p>
+<ol type="1">
+<li>Descargar el archivo .exe desde la pagina oficial:</li>
+</ol>
+<ul>
+<li>https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/BIOS/105506/ASUS_GA502IV_300_BIOS_Update.exe?model=ROG%20Zephyrus%20G15</li>
+</ul>
+<ol type="1" start="2">
+<li>Ejecutamos el fichero como administrador, en la primera ventana pulsamos &#34;Next&#34;:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\cb3aff179de383b5.png"></p>
+<ol type="1" start="3">
+<li>Aceptamos los términos de licencia:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\6da885e0fa6ac00e.png"></p>
+<ol type="1" start="4">
+<li>Pulsamos en &#34;Install&#34; para instalar la BIOS:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\76b65a00294e23dd.png"></p>
+<ol type="1" start="5">
+<li>Una vez que acabe el proceso de instalación nos pedirá reiniciar el equipo:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\2d688204f5e763.png"></p>
+<ol type="1" start="6">
+<li>Una vez reiniciado el equipo ya tendremos actualizada la BIOS a su última versión y cuando accedamos podremos comprobarlo en la pantalla de inicio de la BIOS:</li>
+</ol>
+<p class="image-container"><img alt="Alt text" src="img\\16d79e91c8c5182f.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Conclusión" duration="5">
+        <p>Tras investigar y aplicar las distintas medidas de seguridad en la BIOS de este modelo en concreto (<strong>ASUS ROG ZEPHYRUS G15 GA502IV</strong>) nos podemos dar cuenta de que no existe una seguridad al 100% de nuestra BIOS ya que carece de algunas funcionalidades como la bloquear los puertos externos USB.</p>
+<p>Además existen técnicas que permiten resetear toda la configuración que hemos realizado como por ejemplo:</p>
+<ul>
+<li>Quitar la pila de la BIOS durante unos segundos.</li>
+<li>Usar un puente o jumper.</li>
+<li>Usar generadores de contraseña.</li>
+<li>Contraseñas maestras que ponen algunos fabricantes que las podemos encontrar en internet.</li>
+<li>etc...</li>
+</ul>
+<p>Una solución que podemos aplicar es cifrar el contenido de nuestro disco para obtener mayor seguridad pero hay que tener en cuenta que tenemos que dejar sin cifrar la partición de booteo ya que sino el equipo no podrá arrancar.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
