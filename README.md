@@ -1,2 +1,2 @@
 # Proyecto-1.1
-Enlace: https://rladgar.github.io/Codelab-1.0/
+Enlace: https://rladgar.github.io/Proyecto-1.1/
